@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+/* Global / Typography */
+body {
+  background-color: #d8d8d8;
+  font-family: 'Proxima Nova', sans-serif;
+  color: #7c7c80;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 15px;
+
+  margin: 0;
+  outline: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.row {
+  width: 100%;
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 1000px;
+  display: block;
+  margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-child {
+  display: flex;
+  flex: 1;
+}
+@media (max-width: 950px) {
+  .flex {
+    flex-direction: column;
+  }
+  .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .hide-under-950 {
+    display: none;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img {
+  vertical-align: middle;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+input {
+  border: 1px solid #e4ebef;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+.text-dark {
+  color: #343951;
+}
+
+.text-semi-bold {
+  font-weight: 600;
+}
+
+.text-small {
+  font-size: 10px;
+  color: #b4b4b4;
+}
+
+/* Margin / Padding */
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.py-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Header Styles */
+header {
+  background-color: #343951;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+header .logo {
+  height: 30px;
+}
+
+/* CandidateTable Styles */
+.candidate-table-box {
+  background: #ffffff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 3px 2px 2px 2px;
+  overflow: hidden;
+}
+.candidate-table-inner-div {
+  /* padding: 10px 15px; */
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.candidate-table-box p {
+  line-height: 30px;
+}
+
+.green-oval,
+.white-oval {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+.green-oval {
+  background: #34b96f;
+}
+.white-oval {
+  background: #fff;
+}
+
+/* Colours */
+.bg-gray {
+  background-color: #f9fafb;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+/* Border */
+.border-bottom-light {
+  border-bottom: 1px solid #eef3f6;
 }
